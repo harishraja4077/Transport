@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Stackly | Transport Solutions</title>
+  <meta name="description" content="Stackly provides world-class ocean, air, and road freight forwarding, shipment tracking, smart warehousing, and cargo distribution globally.">
+  <meta name="keywords" content="logistics, transport, cargo tracking, shipping cost calculator, air freight, ocean cargo, freight forwarding">
+  <meta name="author" content="Stackly">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       TOP INFO BAR
+       ========================================== -->
+  <div class="topbar">
+    <div class="container topbar-wrapper">
+      <div class="topbar-info">
+        <div class="topbar-info-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@Stackly.com</span>
+        </div>
+        <div class="topbar-info-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+1 (800) 234-5678</span>
+        </div>
+        <div class="topbar-info-item">
+          <i class="fas fa-clock"></i>
+          <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+        </div>
+      </div>
+      <div class="topbar-socials">
+        <a href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       STICKY NAVIGATION HEADER
+       ========================================== -->
+  <header class="navbar">
+    <div class="container navbar-wrapper">
+      <a href="#home" class="logo">
+        <img src="images/logo.webp" alt="Logo">
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="404.html" class="nav-link">About Us</a>
+        <a href="404.html" class="nav-link">Services</a>
+        <a href="404.html" class="nav-link">Cost & Tracking</a>
+        <a href="404.html" class="nav-link">Contact</a>
+        <div class="nav-btn">
+          <button id="quote-header-btn" class="btn btn-primary">Get a Quote</button>
+        </div>
+      </nav>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section id="home" class="hero">
+      <div class="container hero-wrapper">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-globe-americas"></i>
+            <span>Global Transport & Freight Forwarding</span>
+          </div>
+          <h1 class="hero-title">Safe, Fast & <span>Reliable</span> Logistics Solutions</h1>
+          <p class="hero-desc">Connecting businesses globally with seamless shipping networks, real-time cargo visibility, and optimized transport channels.</p>
+          <div class="hero-btns">
+            <a href="#services" class="btn btn-primary">Our Services</a>
+            <a href="#tracker-section" class="btn btn-outline" style="border-color: #ffffff; color: #ffffff;">Calculate Shipping</a>
+          </div>
+        </div>
+        
+        <div class="hero-widget">
+          <h2 class="hero-widget-title">
+            <i class="fas fa-map-marker-alt"></i>
+            Track Shipment
+          </h2>
+          <p class="hero-widget-desc">Enter your cargo reference tracking ID to monitor shipping status in real-time.</p>
+          
+          <form id="tracking-form-hero" class="widget-tracker-form">
+            <div class="widget-tracker-input-wrapper">
+              <i class="fas fa-box-open"></i>
+              <input type="text" id="tracking-input-hero" class="widget-tracker-input" placeholder="e.g. ANV-1029-SHIP" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Track Cargo</button>
+          </form>
+          
+          <div class="quick-codes-info">
+            <p><strong>Demo Track IDs:</strong></p>
+            <p>• In Transit: <span>ANV-1029-SHIP</span></p>
+            <p>• Out for Delivery: <span>ANV-4040-TRK</span></p>
+            <p>• Delivered: <span>ANV-8080-DLV</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PROMO FEATURES SECTION
+         ========================================== -->
+    <section class="features-promo">
+      <div class="container features-promo-grid">
+        <div class="feature-promo-card">
+          <div class="feature-promo-icon">
+            <i class="fas fa-plane-departure"></i>
+          </div>
+          <div>
+            <h3 class="feature-promo-title">Time-Definite Delivery</h3>
+            <p class="feature-promo-desc">Express delivery options prioritizing speed, punctuality, and door-to-door security.</p>
+          </div>
+        </div>
+
+        <div class="feature-promo-card">
+          <div class="feature-promo-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div>
+            <h3 class="feature-promo-title">Global Carrier Network</h3>
+            <p class="feature-promo-desc">Strategic distribution pipelines extending across major airports, shipping lanes, and rails.</p>
+          </div>
+        </div>
+
+        <div class="feature-promo-card">
+          <div class="feature-promo-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <div>
+            <h3 class="feature-promo-title">24/7 Operations Hub</h3>
+            <p class="feature-promo-desc">Day-and-night dispatch support and customer care lines managing cargo safety.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT US SECTION
+         ========================================== -->
+    <section id="about" class="section">
+      <div class="container about-wrapper">
+        <div class="about-images-wrapper">
+          <div class="about-img-main">
+            <img src="images/truck.webp" alt="Logistics Freight Truck">
+          </div>
+          <div class="about-img-sub">
+            <img src="images/package.webp" alt="Modern Warehouse Logistics">
+          </div>
+          <div class="about-experience-badge">
+            <span class="about-exp-num">25+</span>
+            <span class="about-exp-lbl">Years of Excellence</span>
+          </div>
+        </div>
+        
+        <div class="about-content-wrapper">
+          <span class="section-tag">About Our Company</span>
+          <h2 class="section-title">We Deliver Cargo Safely & On-Time Worldwide</h2>
+          <p class="section-desc">Stackly is a premium international logistics company managing sea freight, air freight forwarding, customs clearance, and global distribution. We empower shippers to build leaner supply chains.</p>
+          
+          <p class="about-quote">"Simplifying logistics through innovative cargo visibility systems, dedicated fleets, and experienced industry operators."</p>
+          
+          <div class="about-skills">
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-title-row">
+                <span>On-Time Shipment Delivery</span>
+                <span>99.4%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="99.4%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar-title-row">
+                <span>Customs Clearance Efficiency</span>
+                <span>98.7%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-percentage="98.7%"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-features-checklist">
+            <div class="checklist-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Real-Time Tracking</span>
+            </div>
+            <div class="checklist-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Bonded Warehousing</span>
+            </div>
+            <div class="checklist-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Customs Consultancy</span>
+            </div>
+            <div class="checklist-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Premium Cargo Cover</span>
+            </div>
+          </div>
+          
+          <a href="#tracker-section" class="btn btn-primary">Book Cargo Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         STATS COUNTER SECTION
+         ========================================== -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-truck-moving"></i></div>
+          <div class="stat-number" data-target="1500">0</div>
+          <h3 class="stat-title">Modern Vehicles</h3>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-globe-europe"></i></div>
+          <div class="stat-number" data-target="145">0</div>
+          <h3 class="stat-title">Countries Covered</h3>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="stat-number" data-target="680">0</div>
+          <h3 class="stat-title">Expert Logistics Agents</h3>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-box"></i></div>
+          <div class="stat-number" data-target="10">0</div>
+          <h3 class="stat-title">Million Tons Delivered</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES SECTION
+         ========================================== -->
+    <section id="services" class="section section-bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Specialized Logistics</span>
+          <h2 class="section-title">Our Premium Freight Services</h2>
+          <p class="section-desc">Flexible transportation packages configured to optimize timelines, cargo weight, and shipping budgets.</p>
+        </div>
+        
+        <div class="services-tabs-nav">
+          <button class="services-tab-btn active" data-filter="all">All Services</button>
+          <button class="services-tab-btn" data-filter="freight">Freight Forwarding</button>
+          <button class="services-tab-btn" data-filter="warehousing">Warehousing & Customs</button>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Air Freight -->
+          <div class="service-card" data-category="freight">
+            <div class="service-card-image">
+              <span class="service-badge">Express</span>
+              <img src="images/flight.webp" alt="Air Cargo Jet">
+              <div class="service-card-icon-floating">
+                <i class="fas fa-plane"></i>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Air Freight Forwarding</h3>
+              <p class="service-card-desc">Time-sensitive shipping via air transport networks. Includes customs document handling and priority cargo scheduling.</p>
+              <a href="#tracker-section" class="service-card-link">Calculate Air Rate <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Ocean Freight -->
+          <div class="service-card" data-category="freight">
+            <div class="service-card-image">
+              <span class="service-badge">Volume</span>
+              <img src="images/tree.webp" alt="Ocean Cargo Ship">
+              <div class="service-card-icon-floating">
+                <i class="fas fa-ship"></i>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Ocean Cargo Carrier</h3>
+              <p class="service-card-desc">Cost-efficient maritime logistics for large volumes. Offering Full Container Load (FCL) and Less Container Load (LCL) solutions.</p>
+              <a href="#tracker-section" class="service-card-link">Calculate Sea Rate <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Road Transport -->
+          <div class="service-card" data-category="freight">
+            <div class="service-card-image">
+              <span class="service-badge">Flexible</span>
+              <img src="images/truck.webp" alt="Ground Logistics Truck">
+              <div class="service-card-icon-floating">
+                <i class="fas fa-truck"></i>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Ground Trucking Fleet</h3>
+              <p class="service-card-desc">Door-to-door continental shipping. Multi-axle carriers, refrigerated logistics trailers, and flatbeds for oversized cargo.</p>
+              <a href="#tracker-section" class="service-card-link">Calculate Road Rate <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Warehousing -->
+          <div class="service-card" data-category="warehousing">
+            <div class="service-card-image">
+              <span class="service-badge">Secure</span>
+              <img src="images/package.webp" alt="Logistics Storage Warehouse">
+              <div class="service-card-icon-floating">
+                <i class="fas fa-warehouse"></i>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Smart Warehousing</h3>
+              <p class="service-card-desc">Climate-controlled logistics centers equipped with barcode classification systems, 24/7 security, and stock reports.</p>
+              <a href="#tracker-section" class="service-card-link">Get Storage Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Customs Brokerage -->
+          <div class="service-card" data-category="warehousing">
+            <div class="service-card-image">
+              <span class="service-badge">Legal</span>
+              <img src="images/boat.webp" alt="Customs Inspection Clearance">
+              <div class="service-card-icon-floating">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Customs Brokerage</h3>
+              <p class="service-card-desc">Comprehensive customs declaration paperwork, regulatory checks, tax calculations, and tariff consulting.</p>
+              <a href="#tracker-section" class="service-card-link">Get Brokerage Info <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Supply Chain -->
+          <div class="service-card" data-category="warehousing">
+            <div class="service-card-image">
+              <span class="service-badge">Optimized</span>
+              <img src="images/system.webp" alt="Logistics Supply Chain Management">
+              <div class="service-card-icon-floating">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Supply Chain Design</h3>
+              <p class="service-card-desc">Global network logistics mapping, vendor management systems, and cost-reduction consultation.</p>
+              <a href="#tracker-section" class="service-card-link">Consult Logistics Experts <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         QUOTE CALCULATOR & SHIPMENT TRACKING HUB
+         ========================================== -->
+    <section id="tracker-section" class="section">
+      <div class="container hub-wrapper">
+        <!-- Quote Calculator Card -->
+        <div class="hub-card">
+          <span class="section-tag" style="margin-bottom: 8px;">Real-Time Pricing</span>
+          <h2 style="font-size: 1.8rem; margin-bottom: 12px; color: var(--primary);">Calculate Shipping Cost</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Get an immediate cost estimation based on distance, cargo weight, and transport logistics type.</p>
+          
+          <form id="freight-calc-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label for="calc-distance" class="form-label">Distance (km)</label>
+                <input type="number" id="calc-distance" class="form-control" placeholder="e.g. 850" min="1" required>
+              </div>
+              <div class="form-group">
+                <label for="calc-weight" class="form-label">Weight (kg)</label>
+                <input type="number" id="calc-weight" class="form-control" placeholder="e.g. 120" min="1" required>
+              </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label for="calc-transport" class="form-label">Transport Channel</label>
+                <select id="calc-transport" class="form-control">
+                  <option value="road" selected>Road Trucking</option>
+                  <option value="air">Air Freight</option>
+                  <option value="ocean">Ocean Cargo</option>
+                  <option value="rail">Rail Transport</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="calc-service" class="form-label">Service Speed</label>
+                <select id="calc-service" class="form-control">
+                  <option value="standard" selected>Standard Shipping</option>
+                  <option value="express">Express Delivery (+$30)</option>
+                  <option value="overnight">Overnight Priority (+$75)</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="calculator-results">
+              <div>
+                <span class="calc-price-lbl">ESTIMATED PRICE</span>
+                <div id="quote-price" class="calc-price-val">$0.00</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Book Shipment</button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Detailed Tracking Hub Card -->
+        <div class="hub-card">
+          <span class="section-tag" style="margin-bottom: 8px;">Detailed Status</span>
+          <h2 style="font-size: 1.8rem; margin-bottom: 12px; color: var(--primary);">Cargo Tracking Center</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Lookup shipping milestones, timestamps, and current regional locations of your freight containers.</p>
+          
+          <form id="tracking-form-hub" class="tracking-search-bar">
+            <input type="text" id="tracking-input-hub" class="form-control" placeholder="Enter Cargo ID (e.g. ANV-1029-SHIP)" required>
+            <button type="submit" class="btn btn-secondary">Search</button>
+          </form>
+          
+          <div id="tracking-results-box" class="tracking-result-box" style="display: none;">
+            <div class="tracker-status-header">
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-muted); display: block; font-weight: 600;">CARGO ID</span>
+                <span id="tracker-number" class="tracker-id-txt">ANV-1029-SHIP</span>
+              </div>
+              <span id="tracker-status" class="tracker-status-badge">In Transit</span>
+            </div>
+            
+            <div id="timeline-steps" class="tracker-timeline">
+              <!-- Dynamically populated steps inside script.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS SECTION
+         ========================================== -->
+    <section id="testimonials" class="section section-bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Client Reviews</span>
+          <h2 class="section-title">What Our Shippers Say</h2>
+          <p class="section-desc">Read reviews from industrial logistics coordinators and import/export managers using our cargo network.</p>
+        </div>
+        
+        <div class="testimonials-slider-container">
+          <div id="testimonial-track" class="testimonials-track">
+            <!-- Slide 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <p class="testimonial-text">"Anvoy Logistics transformed our product supply chains. Their online cargo calculator is accurate, and the transit notifications keep our commercial warehouses coordinated."</p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-user">
+                <img class="testimonial-avatar" src="images/client1.webp" alt="Sarah Jenkins">
+                <div class="testimonial-info">
+                  <h4 class="testimonial-name">Sarah Jenkins</h4>
+                  <span class="testimonial-role">Global Supply Manager, Apex Industries</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <p class="testimonial-text">"Customs clearances at the sea ports used to be a massive bottleneck for our operations. Anvoy Brokerage handles regulatory processing efficiently, getting our items released in hours."</p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-user">
+                <img class="testimonial-avatar" src="images/client2.webp" alt="Marcus Vance">
+                <div class="testimonial-info">
+                  <h4 class="testimonial-name">Marcus Vance</h4>
+                  <span class="testimonial-role">Logistics Coordinator, EuroTrade Corp</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-quote-icon">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <p class="testimonial-text">"Overnight delivery on industrial cargo parts is critical for keeping our assembly lines active. Stackly Air Freight handles high weight priority logistics safely and flawlessly."</p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-user">
+                <img class="testimonial-avatar" src="images/client3.webp" alt="David Thorne">
+                <div class="testimonial-info">
+                  <h4 class="testimonial-name">David Thorne</h4>
+                  <span class="testimonial-role">Director of Operations, Automatech LLC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="slider-dots" class="slider-controls">
+            <!-- Dots dynamically populated inside script.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PARTNERS SECTION
+         ========================================== -->
+    <section class="partners-section">
+      <div class="container partners-slider">
+        <img class="partner-logo" src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?auto=format&fit=crop&q=80&w=150" alt="Partner Logo 1">
+        <img class="partner-logo" src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&q=80&w=150" alt="Partner Logo 2">
+        <img class="partner-logo" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=150" alt="Partner Logo 3">
+        <img class="partner-logo" src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&q=80&w=150" alt="Partner Logo 4">
+        <img class="partner-logo" src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=150" alt="Partner Logo 5">
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div>
+        <h3 class="logo" style="margin-bottom: 20px;">
+          <img src="images/logo.webp" alt="Logo" style="filter: brightness(0) invert(1); height: 38px;">
+        </h3>
+        <p class="footer-about-text">Delivering professional supply chain answers for global industrial organizations, retail businesses, and trading partners. Standardizing shipping safety and logistics dispatch pipelines.</p>
+        <div class="footer-socials">
+          <a class="footer-social-btn" href="404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="footer-social-btn" href="404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a class="footer-social-btn" href="404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a class="footer-social-btn" href="404.html" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-widget-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home" class="footer-link"><i class="fas fa-chevron-right"></i> Home Overview</a></li>
+          <li><a href="404.html" class="footer-link"><i class="fas fa-chevron-right"></i> Corporate Profile</a></li>
+          <li><a href="404.html" class="footer-link"><i class="fas fa-chevron-right"></i> Logistics Services</a></li>
+          <li><a href="404.html" class="footer-link"><i class="fas fa-chevron-right"></i> Tracking & Calculator</a></li>
+          <li><a href="404.html" class="footer-link"><i class="fas fa-chevron-right"></i> Clients Feedback</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-widget-title">Information</h4>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="footer-contact-text">
+              <strong>Corporate HQ</strong>
+              <span>100 Logistics Blvd, Suite 400, Chicago, IL</span>
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="footer-contact-text">
+              <strong>Support Hotline</strong>
+              <span>+1 (800) 234-5678</span>
+            </div>
+          </li>
+          <li class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <div class="footer-contact-text">
+              <strong>General Inquiries</strong>
+              <span>info@Stackly.com</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-widget-title">Our Newsletter</h4>
+        <p class="footer-about-text" style="font-size: 0.9rem;">Subscribe to get weekly insights about cargo freight tariffs, shipping regulations, and warehousing solutions.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+          <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container footer-bottom-wrapper">
+        <p>&copy; 2026 Stackly. All rights reserved. Professional Transport Services.</p>
+        <div class="footer-bottom-links">
+          <a href="404.html">Terms & Conditions</a>
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Security Matrix</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
