@@ -348,58 +348,83 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ==========================================
-  // TESTIMONIALS SLIDER
-  // ==========================================
-  const testimonialTrack = document.getElementById('testimonial-track');
-  const testimonialSlides = document.querySelectorAll('.testimonial-card');
-  const dotsContainer = document.getElementById('slider-dots');
-  
-  if (testimonialTrack && testimonialSlides.length > 0) {
-    let currentIndex = 0;
-    
-    // Create navigation dots
-    testimonialSlides.forEach((slide, idx) => {
-      const dot = document.createElement('button');
-      dot.className = `slider-dot ${idx === 0 ? 'active' : ''}`;
-      dot.setAttribute('aria-label', `Go to testimonial slide ${idx + 1}`);
-      dot.addEventListener('click', () => goToSlide(idx));
-      dotsContainer.appendChild(dot);
+// ==========================================
+// TESTIMONIALS SLIDER
+// ==========================================
+
+const testimonialTrack = document.getElementById('testimonial-track');
+const slides = document.querySelectorAll('.testimonial-card');
+const dots = document.querySelectorAll('.slider-dot');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+if (testimonialTrack && slides.length > 0) {
+
+    let currentSlide = 0;
+
+    function updateSlider() {
+
+        testimonialTrack.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle(
+                'active',
+                index === currentSlide
+            );
+        });
+    }
+
+    // Next
+    function nextSlide() {
+        currentSlide++;
+
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+
+        updateSlider();
+    }
+
+    // Previous
+    function prevSlide() {
+        currentSlide--;
+
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1;
+        }
+
+        updateSlider();
+    }
+
+    // Buttons
+    nextBtn?.addEventListener('click', nextSlide);
+    prevBtn?.addEventListener('click', prevSlide);
+
+    // Dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            updateSlider();
+        });
     });
 
-    const dots = document.querySelectorAll('.slider-dot');
+    // Auto Slide
+    let autoSlide = setInterval(nextSlide, 5000);
 
-    function goToSlide(index) {
-      currentIndex = index;
-      testimonialTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === currentIndex);
-      });
-    }
+    const sliderContainer =
+        document.querySelector('.testimonials-slider-container');
 
-    // Auto-sliding every 5 seconds
-    let autoSlideInterval = setInterval(nextSlide, 6000);
+    sliderContainer?.addEventListener('mouseenter', () => {
+        clearInterval(autoSlide);
+    });
 
-    function nextSlide() {
-      let nextIndex = currentIndex + 1;
-      if (nextIndex >= testimonialSlides.length) {
-        nextIndex = 0;
-      }
-      goToSlide(nextIndex);
-    }
+    sliderContainer?.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(nextSlide, 5000);
+    });
 
-    // Pause auto slide on mouse hover
-    const sliderContainer = document.querySelector('.testimonials-slider-container');
-    if (sliderContainer) {
-      sliderContainer.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideInterval);
-      });
-      sliderContainer.addEventListener('mouseleave', () => {
-        autoSlideInterval = setInterval(nextSlide, 6000);
-      });
-    }
-  }
-
+    updateSlider();
+}
   // ==========================================
   // NEWSLETTER & FOOTER SUBMIT
   // ==========================================

@@ -1260,22 +1260,39 @@ button {
 }
 
 /* ==========================================
-   TESTIMONIAL SECTION
+   TESTIMONIALS SECTION
    ========================================== */
 
 .testimonials-slider-container {
-    max-width: 900px;
-    margin: 0 auto;
     position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 60px 70px;
+}
+
+.testimonials-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.testimonials-track {
+    display: flex;
+    transition: transform 0.6s ease;
+    width: 100%;
 }
 
 .testimonial-card {
-    background: #fff;
-    padding: 50px;
+    min-width: 100%;
+    flex: 0 0 100%;
+    background: #ffffff;
     border-radius: 24px;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    padding: 28px;
     text-align: center;
-    margin-top: 40px;
+    box-shadow:
+        0 15px 40px rgba(248, 242, 242, 0.08),
+        0 5px 15px rgba(241, 235, 235, 0.04);
+    border: 1px solid rgba(239, 137, 47, 0.6);
 }
 
 .testimonial-quote-icon {
@@ -1285,18 +1302,17 @@ button {
 }
 
 .testimonial-text {
-    font-size: 1.35rem;
-    line-height: 1.8;
+    font-size: 1.1rem;
+    line-height: 1.9;
     color: var(--primary);
-    max-width: 750px;
+    max-width: 700px;
     margin: 0 auto 25px;
-    font-weight: 500;
 }
 
 .testimonial-stars {
     color: #ffb400;
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .testimonial-user {
@@ -1307,12 +1323,12 @@ button {
 }
 
 .testimonial-avatar {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--accent);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .testimonial-info {
@@ -1320,46 +1336,156 @@ button {
 }
 
 .testimonial-name {
-    font-size: 1.4rem;
-    font-weight: 700;
+    margin: 0;
+    font-size: 1.2rem;
     color: var(--primary);
-    margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .testimonial-role {
+    font-size: 0.95rem;
     color: var(--text-muted);
-    font-size: 1rem;
 }
 
-.slider-controls {
+/* ==========================================
+   NAVIGATION BUTTONS
+   ========================================== */
+
+.testimonial-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: #ff975b;
+    color: var(--primary);
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(235, 227, 227, 0.12);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.testimonial-nav:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+
+#testimonials {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/* ==========================================
+   DOTS
+   ========================================== */
+
+.testimonial-dots {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 35px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
 }
 
-.slider-controls button,
 .slider-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
+    width: 12px;
+    height: 12px;
     border: none;
-    background: #d9d9d9;
+    border-radius: 50%;
+    background: #d4d4d4;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .slider-dot.active {
-    width: 40px;
+    width: 38px;
     border-radius: 20px;
     background: var(--accent);
 }
+
+/* ==========================================
+   BACKGROUND
+   ========================================== */
+
 .section-bg-light {
     background: linear-gradient(
         180deg,
         #f8fafc 0%,
         #ffffff 100%
     );
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .testimonials-slider-container {
+        padding: 10px 10px 30px;
+    }
+
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .testimonial-user {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-info {
+        text-align: center;
+    }
+
+    .testimonial-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .testimonial-avatar {
+        width: 65px;
+        height: 65px;
+    }
+
+    .testimonial-name {
+        font-size: 1.05rem;
+    }
+
+    .testimonial-role {
+        font-size: 0.85rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+}
+#testimonial-track {
+    display: flex;
+    width: 100%;
+}
+
+.testimonial-card {
+    min-width: 100%;
 }
 
 /* ==========================================
